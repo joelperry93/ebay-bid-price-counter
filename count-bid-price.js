@@ -12,6 +12,6 @@ var bidCounter = {
 	displayTotal : function () {
 		alert('£' + this.getTotal());
 	}
-};
+}
 
 bidCounter.displayTotal();
