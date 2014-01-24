@@ -1,13 +1,17 @@
 var bidCounter = { 
-	total 		: 0,
 	divs 		: document.getElementsByClassName('g-asmG'),
-	calculate 	: function () {
+	getTotal 	: function () {
+		var total = 0;
+		
 		for (var i = 0; i < this.divs.length; i++) { 
-			this.total += parseInt(this.divs[i].innerHTML.substr(1)); 
+			total += parseInt(this.divs[i].innerHTML.substr(1)); 
 		}
 		
-		return this.total;
+		return total;
+	},
+	displayTotal : function () {
+		alert('£' + this.getTotal());
 	}
 };
 
-console.log('£' + bidCounter.calculate());
+bidCounter.displayTotal();
